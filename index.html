@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คุง ณัฐพงศ์ เปรมพูลสวัสดิ์</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap');
+        body { font-family: 'Sarabun', sans-serif; scroll-behavior: smooth; }
+        .admin-mode { display: none; }
+        .bg-pp-orange { background-color: #FF5C00; }
+        .text-pp-orange { color: #FF5C00; }
+        .border-pp-orange { border-color: #FF5C00; }
+        .social-icon { transition: all 0.3s ease; }
+        .social-icon:hover { transform: translateY(-3px); }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800">
+
+    <div id="user-view">
+        <nav class="bg-white text-slate-900 p-4 sticky top-0 z-50 shadow-md border-b-4 border-pp-orange">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="logo-text-desktop-black.png" alt="Logo" class="h-10 object-contain">
+                    <div class="h-8 w-[2px] bg-gray-300 hidden md:block"></div>
+                    <h1 class="text-lg font-bold tracking-tight hidden md:block">คุง ณัฐพงศ์ เปรมพูลสวัสดิ์</h1>
+                </div>
+                <div class="space-x-6 text-sm font-medium flex items-center">
+                    <a href="index.html" class="hover:text-pp-orange transition">หน้าหลัก</a>
+                    <a href="parli.html" class="hover:text-pp-orange transition hidden md:block">งานสภา</a>
+                    <a href="work.html" class="hover:text-pp-orange transition hidden md:block">งานพื้นที่</a>
+                    <a href="#report" class="bg-pp-orange px-4 py-2 text-white font-bold hover:bg-orange-600 transition shadow-lg shadow-orange-200">แจ้งปัญหา</a>
+                    <a href="https://donation.peoplesparty.or.th/donate" class="bg-pp-orange px-4 py-2 text-white font-bold hover:bg-orange-600 transition shadow-lg shadow-orange-200">บริจาคให้พรรคประชาชน</a>
+                </div>
+            </div>
+        </nav>
+
+        <header id="home" class="bg-white py-16 border-b border-gray-100">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                <div class="relative">
+                    <div class="w-64 h-64 bg-slate-200 rounded-none overflow-hidden shadow-2xl border-b-8 border-pp-orange">
+                        <img src="profilepic.jpg" alt="คุง ณัฐพงศ์" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-pp-orange text-white p-3 font-bold text-sm shadow-lg">
+                        กรุงเทพมหานคร เขต 21 
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl font-black text-slate-900 mb-2 uppercase">คุง ณัฐพงศ์ เปรมพูลสวัสดิ์</h2>
+                    <p class="text-pp-orange text-xl font-bold mb-4">พรรคประชาชน | People's Party</p>
+                    <p class="text-black font-bold mb-4">เขตประเวศ สะพานสูง (ประเวศ ดอกไม้ ทับช้าง)</p>
+                    <p class="text-slate-600 text-lg max-w-xl leading-relaxed mb-6">
+                        "โดยประชาชน เพื่อประชาชน สร้างประเทศไทยที่อำนาจสูงสุดเป็นของประชาชน"
+                    </p>
+
+                    <div class="flex justify-center md:justify-start gap-6 text-3xl">
+                        <a href="https://www.facebook.com/nuttapongprem" target="_blank" class="social-icon text-slate-400 hover:text-[#1877F2]" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/nuttapongprem/" target="_blank" class="social-icon text-slate-400 hover:text-[#E4405F]" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@nuttapongprem" target="_blank" class="social-icon text-slate-400 hover:text-black" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://x.com/nuttapongprem" target="_blank" class="social-icon text-slate-400 hover:text-[#1DA1F2]" title="Twitter"> <i class="fab fa-twitter"></i></a>
+                        <a href="https://linktr.ee/nuttapongprem" target="_blank" class="social-icon text-slate-400 hover:text-[#43E000]" title="Linktree"><i class="fas fa-tree"></i></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="plan" class="py-16 bg-slate-100">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-black text-slate-900 inline-block border-b-4 border-pp-orange pb-2 uppercase ">
+                            แผนการทำงานสมัยที่ 2
+                        </h3>
+                        <p class="text-slate-500 mt-4 text-lg ">"ยกระดับการทำงานให้ดีขึ้น แก้ปัญหาที่ต้นตอ"</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                        <div class="p-6 border-l-4 border-pp-orange bg-gray-50 shadow-sm">
+                            <h4 class="text-slate-900 font-bold text-xl mb-2 flex items-center">
+                                <i class="fas fa-bullhorn text-pp-orange mr-3"></i> สื่อสารมากขึ้น
+                            </h4>
+                            <p class="text-slate-600 text-sm">สื่อสารผ่านทุกช่องทางให้เข้มข้นขึ้น เพราะประชาชนมีเกือบ 200,000 คน เราต้องเข้าถึงทุกคนเพื่อรับฟังเสียงสะท้อนอย่างทั่วถึง</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-pp-orange bg-gray-50 shadow-sm">
+                            <h4 class="text-slate-900 font-bold text-xl mb-2 flex items-center">
+                                <i class="fas fa-street-view text-pp-orange mr-3"></i> เข้าถึงมากขึ้น
+                            </h4>
+                            <p class="text-slate-600 text-sm">ทำงานร่วมกับประชาชนทุกกลุ่ม ทุกสถานที่ หากต้องการให้ลงพื้นที่จุดไหน สามารถแจ้งความประสงค์ผ่านแบบฟอร์มด้านล่างได้ทันที</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-orange-50 border border-orange-200 p-8 rounded-lg mb-12 text-center">
+                        <p class="text-slate-700 leading-relaxed italic">
+                            "ผมจะยังคงเป็นผู้แทนที่ไม่แจกเงิน เพราะการนำเงินลงทุนกับการทำงานมากเกินไปจะนำไปสู่วงจรคอรัปชั่นในที่สุด และอาจนำไปสู่ระบบอุปถัมภ์ที่เลี้ยงไข้ปัญหาให้ไม่จบสิ้น"
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-4">
+                        <h4 class="text-xl font-bold text-slate-900 mb-2 flex items-center px-2">
+                            <i class="fas fa-tasks text-pp-orange mr-2"></i> วาระสำคัญ 4 ปีนับจากนี้
+                        </h4>
+                        
+                        <div class="group bg-white border border-slate-200 p-5 hover:border-pp-orange transition-colors shadow-sm">
+                            <div class="flex gap-4">
+                                <div class="text-pp-orange text-xl mt-1"><i class="fas fa-wind"></i></div>
+                                <div>
+                                    <h5 class="font-bold text-slate-900 text-lg">กลิ่นขยะต้องจบได้แล้ว</h5>
+                                    <p class="text-slate-600 text-sm italic">หารือศูนย์กำจัดมูลฝอยอ่อนนุชตั้งแต่วันพรุ่งนี้ เพื่อจบปัญหานี้ด้วยทุกวิถีทางที่เราทำได้</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white border border-slate-200 p-5 hover:border-pp-orange transition-colors shadow-sm">
+                            <div class="flex gap-4">
+                                <div class="text-pp-orange text-xl mt-1"><i class="fas fa-cloud-showers-heavy"></i></div>
+                                <div>
+                                    <h5 class="font-bold text-slate-900 text-lg">ติดตามสถานการณ์น้ำใกล้ชิด</h5>
+                                    <p class="text-slate-600 text-sm italic">ประสานสำนักการระบายน้ำ กทม. เพื่อพร่องน้ำเตรียมรับมือฤดูฝน และแจ้งเตือนประชาชนให้ทันเวลา</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white border border-slate-200 p-5 hover:border-pp-orange transition-colors shadow-sm">
+                            <div class="flex gap-4">
+                                <div class="text-pp-orange text-xl mt-1"><i class="fas fa-home"></i></div>
+                                <div>
+                                    <h5 class="font-bold text-slate-900 text-lg">แก้ปัญหาน้ำท่วมในหมู่บ้านจัดสรร</h5>
+                                    <p class="text-slate-600 text-sm italic">ผลักดันการตั้งนิติบุคคลด้วย พ.ร.บ.จัดสรรที่ดิน (ฉบับใหม่) เพื่อการบริหารจัดการน้ำในระยะยาว</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white border border-slate-200 p-5 hover:border-pp-orange transition-colors shadow-sm">
+                            <div class="flex gap-4">
+                                <div class="text-pp-orange text-xl mt-1"><i class="fas fa-train"></i></div>
+                                <div>
+                                    <h5 class="font-bold text-slate-900 text-lg">ยกระดับสถานีบ้านทับช้าง</h5>
+                                    <p class="text-slate-600 text-sm italic">ผลักดันบันไดเลื่อนฝั่งสะพานสูง ติดตามการดูแลจุดจอดรถ และสาธารณูปโภคที่ตอบโจทย์ประชาชน</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white border border-slate-200 p-5 hover:border-pp-orange transition-colors shadow-sm">
+                            <div class="flex gap-4">
+                                <div class="text-pp-orange text-xl mt-1"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <h5 class="font-bold text-slate-900 text-lg">สิทธิที่ดินชุมชนมหาดไทย/อ่อนนุช 86</h5>
+                                    <p class="text-slate-600 text-sm italic">กระตุ้นความชัดเจนจากภาครัฐ เพื่อแก้ปัญหาน้ำท่วมซ้ำซากและภาระค่าไฟแพงให้ประชาชน</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="report" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <div class="flex items-center space-x-4 mb-8">
+                    <div class="h-10 w-2 bg-pp-orange"></div>
+                    <h3 class="text-3xl font-black text-slate-900 uppercase">แจ้งเรื่องร้องเรียน / นัดหมายลงพื้นที่</h3>
+                </div>
+                <div class="bg-white p-8 border border-slate-200 shadow-lg">
+                    <form id="reportForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">หัวข้อเรื่องหรือสถานที่นัดหมาย</label>
+                            <input type="text" id="title" class="w-full p-4 border-2 border-slate-200 focus:border-pp-orange outline-none transition" placeholder="เช่น กลิ่นขยะ / นัดลงพื้นที่หมู่บ้าน..." required>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">หมวดหมู่</label>
+                                <select id="category" class="w-full p-4 border-2 border-slate-200 focus:border-pp-orange outline-none bg-white">
+                                    <option>สาธารณูปโภค (น้ำ/ไฟ/ถนน)</option>
+                                    <option>สิ่งแวดล้อม/ขยะ</option>
+                                    <option>นัดหมายลงพื้นที่</option>
+                                    <option>สวัสดิการ/สังคม</option>
+                                    <option>อื่นๆ</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">ลงชื่อผู้ติดต่อ</label>
+                                <input type="text" id="name" class="w-full p-4 border-2 border-slate-200 focus:border-pp-orange outline-none" placeholder="ชื่อ-นามสกุล" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">เบอร์โทรศัพท์ติดต่อ</label>
+                            <input type="tel" id="phone" class="w-full p-4 border-2 border-slate-200 focus:border-pp-orange outline-none" placeholder="08x-xxxxxxx" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">รายละเอียดเพิ่มเติม</label>
+                            <textarea id="details" rows="5" class="w-full p-4 border-2 border-slate-200 focus:border-pp-orange outline-none transition" placeholder="ระบุตำแหน่งที่เกิดเหตุ หรือข้อมูลที่ต้องการให้ดำเนินการ..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="w-full bg-pp-orange text-white font-black py-5 text-xl hover:bg-slate-900 transition-all shadow-xl">
+                            <span id="btnText">ส่งข้อมูลแจ้งเรื่องทันที</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-slate-900 text-slate-400 py-12 text-center border-t-4 border-pp-orange">
+            <p class="font-bold">© 2026 ทีมงาน สส.ณัฐพงศ์ เปรมพูลสวัสดิ์ | มุ่งมั่นเพื่อความเปลี่ยนแปลง</p>
+        </footer>
+    </div>
+
+    <script>
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw5aKDUF5Ciw47zrBCiChkX-kZvJYtpNlSV_6juOYwmO_4GtgwrM_-fUC5DhHnLa3EQ/exec';
+
+        document.getElementById('reportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            btn.disabled = true;
+            btnText.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i> กำลังส่งข้อมูลเข้าระบบ...';
+
+            const formData = {
+                title: document.getElementById('title').value,
+                category: document.getElementById('category').value,
+                details: document.getElementById('details').value,
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value
+            };
+
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: JSON.stringify(formData)
+            })
+            .then(res => {
+                alert('ส่งข้อมูลถึงทีมงาน สส. เรียบร้อยแล้ว ขอบคุณที่ร่วมพัฒนาพื้นที่ร่วมกันครับ!');
+                document.getElementById('reportForm').reset();
+            })
+            .catch(err => alert('ขออภัย ระบบขัดข้องชั่วคราว'))
+            .finally(() => {
+                btn.disabled = false;
+                btnText.innerText = 'ส่งข้อมูลแจ้งเรื่องทันที';
+            });
+        });
+    </script>
+</body>
+</html>
