@@ -6,16 +6,23 @@
     <title>คุง ณัฐพงศ์ เปรมพูลสวัสดิ์</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap');
         body { font-family: 'Sarabun', sans-serif; scroll-behavior: smooth; }
-        .admin-mode { display: none; }
         .bg-pp-orange { background-color: #FF5C00; }
         .text-pp-orange { color: #FF5C00; }
         .border-pp-orange { border-color: #FF5C00; }
         .social-icon { transition: all 0.3s ease; }
         .social-icon:hover { transform: translateY(-3px); }
+        /* สไตล์เพิ่มเติมสำหรับ Dropdown */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 180px;
+            z-index: 100;
+        }
+        .show { display: block !important; }
     </style>
 </head>
 <body class="bg-gray-50 text-slate-800">
@@ -28,12 +35,32 @@
                     <div class="h-8 w-[2px] bg-gray-300 hidden md:block"></div>
                     <h1 class="text-lg font-bold tracking-tight hidden md:block">คุง ณัฐพงศ์ เปรมพูลสวัสดิ์</h1>
                 </div>
-                <div class="space-x-6 text-sm font-medium flex items-center">
-                    <a href="index.html" class="hover:text-pp-orange transition">หน้าหลัก</a>
-                    <a href="parli.html" class="hover:text-pp-orange transition hidden md:block">งานสภา</a>
-                    <a href="work.html" class="hover:text-pp-orange transition hidden md:block">งานพื้นที่</a>
-                    <a href="#report" class="bg-pp-orange px-4 py-2 text-white font-bold hover:bg-orange-600 transition shadow-lg shadow-orange-200">แจ้งปัญหา</a>
-                    <a href="https://donation.peoplesparty.or.th/donate" class="bg-pp-orange px-4 py-2 text-white font-bold hover:bg-orange-600 transition shadow-lg shadow-orange-200">บริจาคให้พรรคประชาชน</a>
+                
+                <div class="space-x-4 md:space-x-6 text-sm font-medium flex items-center">
+
+                    <div class="relative">
+                        <button id="menuBtn" class="flex items-center hover:text-pp-orange transition focus:outline-none py-2 font-bold">
+                            Menu <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
+                        </button>
+                        <div id="myDropdown" class="dropdown-content bg-white mt-2 shadow-xl border-t-4 border-pp-orange rounded-b-sm py-2">
+                            <a href="index.html" class="block px-4 py-3 hover:bg-orange-50 border-b border-gray-100 transition">
+                                <i class="fas fa-landmark text-pp-orange mr-2"></i> หน้าหลัก
+                            </a>    
+                            <a href="parli.html" class="block px-4 py-3 hover:bg-orange-50 border-b border-gray-100 transition">
+                                <i class="fas fa-landmark text-pp-orange mr-2"></i> งานสภา
+                            </a>
+                            <a href="work.html" class="block px-4 py-3 hover:bg-orange-50 transition">
+                                <i class="fas fa-map-marker-alt text-pp-orange mr-2"></i> งานพื้นที่
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#report" class="bg-pp-orange px-4 py-2 rounded-sm text-white font-bold hover:bg-orange-600 transition shadow-lg shadow-orange-200 text-xs md:text-sm">
+                        แจ้งปัญหา
+                    </a>
+                    <a href="https://donation.peoplesparty.or.th/donate" target="_blank" class="bg-pp-orange px-4 py-2 rounded-sm text-white font-bold hover:bg-orange-600 transition shadow-lg shadow-orange-200 hidden md:block">
+                        บริจาคให้พรรคประชาชน
+                    </a>
                 </div>
             </div>
         </nav>
@@ -57,17 +84,17 @@
                     </p>
 
                     <div class="flex justify-center md:justify-start gap-6 text-3xl">
-                         <a href="https://www.facebook.com/nuttapongprem" target="_blank" class="social-icon text-slate-400 hover:text-[#1877F2]" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/nuttapongprem" target="_blank" class="social-icon text-slate-400 hover:text-[#1877F2]" title="Facebook"><i class="fab fa-facebook"></i></a>
                         <a href="https://www.instagram.com/nuttapongprem/" target="_blank" class="social-icon text-slate-400 hover:text-[#E4405F]" title="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.tiktok.com/@nuttapongprem" target="_blank" class="social-icon text-slate-400 hover:text-black" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://x.com/nuttapongprem" target="_blank" class="social-icon text-slate-400 hover:text-[#1DA1F2]" title="Twitter"> <i class="fab fa-twitter"></i></a>
+                        <a href="https://x.com/nuttapongprem" target="_blank" class="social-icon text-slate-400 hover:text-[#1DA1F2]" title="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="https://linktr.ee/nuttapongprem" target="_blank" class="social-icon text-slate-400 hover:text-[#43E000]" title="Linktree"><i class="fas fa-tree"></i></a>
-                        </a>
                     </div>
                 </div>
             </div>
         </header>
 
+        
         <section id="work" class="py-16 bg-slate-100">
             <div class="container mx-auto px-4 text-center mb-12">
                 <h3 class="text-3xl font-bold inline-block border-b-4 border-pp-orange pb-2">งานพื้นที่</h3>
@@ -122,6 +149,7 @@
             </div>
         </section>
 
+
         <section id="report" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4 max-w-3xl">
                 <div class="flex items-center space-x-4 mb-8">
@@ -159,7 +187,7 @@
                             <textarea id="details" rows="5" class="w-full p-4 border-2 border-slate-200 focus:border-pp-orange outline-none transition" placeholder="ระบุตำแหน่งที่เกิดเหตุ หรือข้อมูลที่ต้องการให้ดำเนินการ..." required></textarea>
                         </div>
 
-                        <button type="submit" id="submitBtn" class="w-full bg-pp-orange text-white font-black py-5 text-xl hover:bg-slate-900 transition-all shadow-xl">
+                        <button type="submit" id="submitBtn" class="w-full bg-pp-orange text-white font-black py-5 text-xl hover:bg-slate-900 transition-all shadow-xl rounded-sm">
                             <span id="btnText">ส่งข้อมูลแจ้งเรื่องทันที</span>
                         </button>
                     </form>
@@ -168,19 +196,34 @@
         </section>
 
         <footer class="bg-slate-900 text-slate-400 py-12 text-center border-t-4 border-pp-orange">
-            <p class="font-bold">© 2026 ทีมงาน สส.ณัฐพงศ์ เปรมพูลสวัสดิ์ | ไทยไม่เทา ไทยเท่าทัน ไทยทันโลก</p>
+            <p class="font-bold">© 2026 ทีมงาน สส.ณัฐพงศ์ เปรมพูลสวัสดิ์ | มุ่งมั่นเพื่อความเปลี่ยนแปลง</p>
         </footer>
     </div>
+
     <script>
-        // *** วาง URL ของ Google Apps Script ของคุณที่นี่ ***
+        // --- ส่วนที่ 1: จัดการเมนู Dropdown ---
+        const menuBtn = document.getElementById('menuBtn');
+        const dropdown = document.getElementById('myDropdown');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // กันไม่ให้ event ไหลไปที่ window
+            dropdown.classList.toggle('show');
+        });
+
+        // ปิด Dropdown เมื่อคลิกที่อื่นในหน้าเว็บ
+        window.addEventListener('click', function(e) {
+            if (!menuBtn.contains(e.target)) {
+                dropdown.classList.remove('show');
+            }
+        });
+
+        // --- ส่วนที่ 2: จัดการการส่งฟอร์ม (Google Sheets) ---
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw5aKDUF5Ciw47zrBCiChkX-kZvJYtpNlSV_6juOYwmO_4GtgwrM_-fUC5DhHnLa3EQ/exec';
 
         document.getElementById('reportForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const btn = document.getElementById('submitBtn');
             const btnText = document.getElementById('btnText');
-            
             btn.disabled = true;
             btnText.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i> กำลังส่งข้อมูลเข้าระบบ...';
 
@@ -197,21 +240,7 @@
                 body: JSON.stringify(formData)
             })
             .then(res => {
-                alert('ขอบคุณที่ร่วมแจ้งปัญหา! ข้อมูลถูกส่งถึงทีมงาน สส. เรียบร้อยแล้ว');
-                
-                // อัปเดตตาราง Admin (Mockup)
-                const tableBody = document.getElementById('adminTableBody');
-                if(tableBody.innerText.includes('ยังไม่มีข้อมูล')){ tableBody.innerHTML = ''; }
-                
-                const row = `
-                    <tr class="border-b border-slate-700 hover:bg-slate-750 transition">
-                        <td class="p-4 font-bold text-white">${formData.title}</td>
-                        <td class="p-4 text-slate-400">${formData.name}<br>${formData.phone}</td>
-                        <td class="p-4"><span class="bg-pp-orange text-white px-2 py-1 text-[10px] font-bold">${formData.category}</span></td>
-                        <td class="p-4"><button class="text-pp-orange hover:underline">รับเรื่อง</button></td>
-                    </tr>
-                `;
-                tableBody.insertAdjacentHTML('afterbegin', row);
+                alert('ส่งข้อมูลถึงทีมงาน สส. เรียบร้อยแล้ว ขอบคุณที่ร่วมพัฒนาพื้นที่ร่วมกันครับ!');
                 document.getElementById('reportForm').reset();
             })
             .catch(err => alert('ขออภัย ระบบขัดข้องชั่วคราว'))
@@ -220,18 +249,6 @@
                 btnText.innerText = 'ส่งข้อมูลแจ้งเรื่องทันที';
             });
         });
-
-        function toggleView() {
-            const user = document.getElementById('user-view');
-            const admin = document.getElementById('admin-view');
-            if (user.style.display === "none") {
-                user.style.display = "block";
-                admin.style.display = "none";
-            } else {
-                user.style.display = "none";
-                admin.style.display = "block";
-            }
-        }
     </script>
 </body>
 </html>
