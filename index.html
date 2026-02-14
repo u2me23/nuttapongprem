@@ -314,8 +314,46 @@
             .finally(() => {
                 submitBtn.disabled = false;
                 btnText.innerText = 'ส่งข้อมูลแจ้งเรื่องทันที';
-    });
-}
+            });
+        }
+
+
+                // ฟังก์ชันปิดประกาศ
+                function closeAnnouncement() {
+                    document.getElementById('announcementModal').classList.add('hidden');
+                }
+                    window.addEventListener('load', () => {
+                        setTimeout(() => {
+                            const modal = document.getElementById('announcementModal');
+                            modal.classList.remove('hidden');
+                // ลูกเล่นขยายรูปเบาๆ แบบพรรคประชาชน
+                        setTimeout(() => {
+                            modal.querySelector('.transform').classList.remove('scale-95');
+                            modal.querySelector('.transform').classList.add('scale-100');
+                                }, 10);
+                            }, 1200); // แสดงหลังจากเข้าเว็บ 1.2 วินาที
+                        });
     </script>
+
+                    <div id="announcementModal" class="fixed inset-0 z-[200] flex items-center justify-center bg-black bg-opacity-85 hidden px-4">
+                        <div class="relative w-full md:w-[70%] max-w-4xl transform transition-all scale-95 duration-300">
+                            
+                            <button onclick="closeAnnouncement()" class="absolute -top-3 -right-3 bg-pp-orange text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-slate-900 transition z-[210] shadow-lg border-2 border-white">
+                                <i class="fas fa-times text-lg"></i>
+                            </button>
+
+                            <div class="overflow-hidden rounded-sm shadow-2xl">
+                                <a href="https://www.facebook.com/share/p/18CcGTkdHq/" target="_blank" class="block">
+                                    <img src="VolunteerOrange.jpg" class="w-full max-h-[80vh] object-contain alt="เพื่อส้ม เชื่อมชุมชน" class="w-full h-auto block">
+                                </a>
+                            </div>
+
+                            <p class="text-white text-opacity-50 text-center text-xs mt-4 uppercase tracking-widest">
+                                คลิกที่รูปเพื่อดูรายละเอียด หรือกด [X] เพื่อปิด
+                            </p>
+                        </div>
+                    </div>
+
+
 </body>
 </html>
